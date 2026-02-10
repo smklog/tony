@@ -56,7 +56,7 @@
         });
         if(!res.ok){throw new Error('submit_failed');}
         form.reset();
-        if(status){status.className='small form-status ok';status.textContent='✅ Request received. We'll contact you within 1 business day.';}
+        if(status){status.className='small form-status ok';status.textContent='✅ Request received. We'll contact you within 1 business day.';}setTimeout(()=>{location.href='./thank-you.html?submitted=1';},250);
       }catch(err){
         if(status){status.className='small form-status err';status.textContent='⚠️ Submission issue. Please email quotes@smklog.com directly.';}
       }finally{btn.disabled=false;}
