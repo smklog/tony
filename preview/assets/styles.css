@@ -76,4 +76,9 @@ textarea{min-height:96px;resize:vertical}
 
 .form-status.ok{background:#eefbf3;border:1px solid #b8e8cb;color:#125c33;padding:10px 12px;border-radius:10px}.form-status.err{background:#fff4f2;border:1px solid #f3c3ba;color:#8a2a19;padding:10px 12px;border-radius:10px}
 
-.thankyou{min-height:70vh;display:flex;align-items:center}.thankyou-card{max-width:760px;margin:0 auto;padding:36px 28px}.thankyou-card h1{max-width:none;margin:8px auto 10px;font-size:clamp(34px,5vw,56px);line-height:1.05}.thankyou-card .sub{max-width:none;margin:0 auto 14px;font-size:18px;color:#35507b}
+
+.thankyou{min-height:76vh;display:flex;align-items:center;background:radial-gradient(circle at 20% 10%,#eef4ff 0%,#f5f8fd 45%,#f3f6fb 100%)}
+.thankyou-shell{max-width:760px;margin:0 auto;text-align:center;background:#fff;border:1px solid #cfdbef;border-radius:18px;padding:42px 30px;box-shadow:0 20px 44px rgba(13,36,78,.11)}
+.thankyou-badge{width:56px;height:56px;border-radius:999px;margin:0 auto 14px;background:#e9f8ef;color:#167a43;display:grid;place-items:center;font-weight:900;font-size:28px;border:1px solid #bde8cc}
+.thankyou-shell h1{font-size:clamp(34px,5vw,60px);line-height:1.02;max-width:none;margin:8px 0 12px}
+.thankyou-shell .sub{max-width:62ch;margin:0 auto 20px;color:#3a557f}.thankyou-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
