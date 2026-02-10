@@ -75,3 +75,5 @@ textarea{min-height:96px;resize:vertical}
 .smk-form .form-status{min-height:20px;margin:10px 0 0;color:#1d3f77}.smk-form button[disabled]{opacity:.65;cursor:not-allowed}
 
 .form-status.ok{background:#eefbf3;border:1px solid #b8e8cb;color:#125c33;padding:10px 12px;border-radius:10px}.form-status.err{background:#fff4f2;border:1px solid #f3c3ba;color:#8a2a19;padding:10px 12px;border-radius:10px}
+
+.thankyou{min-height:70vh;display:flex;align-items:center}.thankyou-card{max-width:760px;margin:0 auto;padding:36px 28px}.thankyou-card h1{max-width:none;margin:8px auto 10px;font-size:clamp(34px,5vw,56px);line-height:1.05}.thankyou-card .sub{max-width:none;margin:0 auto 14px;font-size:18px;color:#35507b}
