@@ -20,7 +20,7 @@
       ].filter(f=>f.value);
       try{
         btn.disabled=true;
-        if(status){status.textContent='Sending...';}
+        if(status){status.className='small form-status';status.textContent='Sending your request...';}
         const res=await fetch(FORM_URL,{
           method:'POST',
           headers:{'Content-Type':'application/json'},
@@ -31,9 +31,9 @@
         });
         if(!res.ok){throw new Error('submit_failed');}
         form.reset();
-        if(status){status.textContent='Request received. We will contact you within 1 business day.';}
+        if(status){status.className='small form-status ok';status.textContent='✅ Request received. We'll contact you within 1 business day.';}
       }catch(err){
-        if(status){status.textContent='Submission issue. Please email quotes@smklog.com directly.';}
+        if(status){status.className='small form-status err';status.textContent='⚠️ Submission issue. Please email quotes@smklog.com directly.';}
       }finally{btn.disabled=false;}
     });
   });
