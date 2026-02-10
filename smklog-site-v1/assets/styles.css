@@ -71,3 +71,5 @@ textarea{min-height:96px;resize:vertical}
 .media-card strong{display:block;font-size:18px;margin-bottom:6px}.media-card p{margin:0;color:#d6e3ff;font-size:14px}
 
 .hs-form-frame{width:100%;min-height:420px}.hs-form-frame iframe{width:100%!important}
+
+.smk-form .form-status{min-height:20px;margin:10px 0 0;color:#1d3f77}.smk-form button[disabled]{opacity:.65;cursor:not-allowed}

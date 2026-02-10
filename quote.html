@@ -1,1 +1,41 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Request Pilot Plan | SMKlog</title><meta name="description" content="Request a pilot lead generation plan for your international logistics sales team."><link rel="canonical" href="https://smklog.com/quote"><link rel="stylesheet" href="./assets/styles.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Logistics lead generation","provider":{"@type":"Organization","name":"SMKlog"}}</script><script src="https://js-na2.hsforms.net/forms/embed/245131015.js" defer></script></head><body><header class="header"><div class="container nav"><a href="./index.html" class="brand">SMK<span>log</span></a><nav><a href="./services.html">Services</a><a href="./regions.html">Regions</a><a href="./quote.html" class="btn">Quote</a></nav></div></header><section class="section"><div class="container"><h1>Request Your Pilot Lead Plan</h1><p class="sub">Use this form to define your ICP, routes, and qualification standards. We return a realistic pilot proposal with delivery cadence and KPI expectations.</p><div class="card"><div class="hs-form-frame" data-region="na2" data-form-id="b60b85d3-7131-4095-a099-e5d09cefe365" data-portal-id="245131015"></div><p class="small" style="margin-top:10px">Response target: within 1 business day. Pilot acceptance depends on fit, compliance, and operational capacity.</p><p class="small">Contact: <a href="mailto:quotes@smklog.com">quotes@smklog.com</a> · <a href="mailto:sales@smklog.com">sales@smklog.com</a></p></div></div></section><footer class="footer"><div class="container"><p>Read our <a href="./privacy.html">Privacy Policy</a> and <a href="./terms.html">Terms</a>.</p></div></footer></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Request Pilot Plan | SMKlog</title><meta name="description" content="Request a pilot lead generation plan for your international logistics sales team."><link rel="canonical" href="https://smklog.com/quote"><link rel="stylesheet" href="./assets/styles.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Logistics lead generation","provider":{"@type":"Organization","name":"SMKlog"}}</script></head><body><header class="header"><div class="container nav"><a href="./index.html" class="brand">SMK<span>log</span></a><nav><a href="./services.html">Services</a><a href="./regions.html">Regions</a><a href="./quote.html" class="btn">Quote</a></nav></div></header><section class="section"><div class="container"><h1>Request Your Pilot Lead Plan</h1><p class="sub">Use this form to define your ICP, routes, and qualification standards. We return a realistic pilot proposal with delivery cadence and KPI expectations.</p><div class="card"><form class="smk-form" data-hs-form><div class="grid-2"><input required name="firstname" placeholder="First name"><input name="lastname" placeholder="Last name"></div><div class="grid-2"><input required type="email" name="email" placeholder="Work email"><input name="phone" placeholder="Phone number"></div><input required name="company" placeholder="Company name"><input name="target_lanes" placeholder="Target lanes (Origin → Destination)"><button class="btn block" type="submit">Submit Qualification Request</button><p class="small form-status" data-form-status></p></form><p class="small" style="margin-top:10px">Response target: within 1 business day. Pilot acceptance depends on fit, compliance, and operational capacity.</p><p class="small">Contact: <a href="mailto:quotes@smklog.com">quotes@smklog.com</a> · <a href="mailto:sales@smklog.com">sales@smklog.com</a></p></div></div></section><footer class="footer"><div class="container"><p>Read our <a href="./privacy.html">Privacy Policy</a> and <a href="./terms.html">Terms</a>.</p></div></footer><script>
+(function(){
+  const FORM_URL='https://api.hsforms.com/submissions/v3/integration/submit/245131015/b60b85d3-7131-4095-a099-e5d09cefe365';
+  const forms=document.querySelectorAll('[data-hs-form]');
+  forms.forEach(form=>{
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const status=form.querySelector('[data-form-status]');
+      const btn=form.querySelector('button[type="submit"]');
+      const fd=new FormData(form);
+      const v=Object.fromEntries(fd.entries());
+      const fields=[
+        {name:'email', value:String(v.email||'').trim()},
+        {name:'0-2/name', value:String(v.company||v.firstname||'').trim()},
+        {name:'firstname', value:String(v.firstname||'').trim()},
+        {name:'lastname', value:String(v.lastname||'').trim()},
+        {name:'phone', value:String(v.phone||'').trim()},
+        {name:'company', value:String(v.company||'').trim()},
+        {name:'target_lanes', value:String(v.target_lanes||'').trim()}
+      ].filter(f=>f.value);
+      try{
+        btn.disabled=true;
+        if(status){status.textContent='Sending...';}
+        const res=await fetch(FORM_URL,{
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({
+            fields,
+            context:{pageUri:location.href,pageName:document.title}
+          })
+        });
+        if(!res.ok){throw new Error('submit_failed');}
+        form.reset();
+        if(status){status.textContent='Request received. We will contact you within 1 business day.';}
+      }catch(err){
+        if(status){status.textContent='Submission issue. Please email quotes@smklog.com directly.';}
+      }finally{btn.disabled=false;}
+    });
+  });
+})();
+</script></body></html>
